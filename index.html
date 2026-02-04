@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio Andika - Programmer, Otomotif, Public Speaking, Kelistrikan.">
+  <meta name="keywords" content="Andika, Programmer, Otomotif, Public Speaking, Kelistrikan, Portfolio">
+  <meta name="author" content="Andika">
+  <link rel="icon" type="image/png" href="assets/ChatGPT Image 5 Feb 2026, 01.58.48.png">
+  <title>Andikadwif.id|Portfolio-Website</title>
+  <link rel="stylesheet" href="style.css">
+<!-- <script src="script.js"></script>
+<script src="index.js"></script> -->
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+
+
+<body>
+  <!-- Navbar -->
+<nav>
+  <div class="nav-container">
+      <div class="logo">
+    <img src="assets/avatar.png"/>
+    <!-- <span class="logo-text">ANDIKA</span> -->
+  </div>
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+    <ul id="nav-menu">
+      <li><a href="#" onclick="navigate('home')">Home</a></li>
+      <li><a href="#" onclick="navigate('about')">about</a></li>
+      <li><a href="#" onclick="navigate('skills')">Skills</a></li>
+      <li><a href="#" onclick="navigate('motivation')">motivation</a></li>   
+      <li><a href="#" onclick="navigate('contact')">contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+  <main>
+    <section id="home" class="section active">
+  <div class="home-container">
+    <div class="intro-text">
+      <h1>Hi, I'm <span class="highlight">Andika</span></h1>
+      <h2 id="typing-text"></h2>
+      <p>
+        A <span class="highlight">Web Developer</span> who focuses on
+        <span class="highlight">Frontend & Backend</span>.  
+          I build websites with a modern and clean style, prioritizing a simple yet powerful user experience.  
+          Every detail I create is always focused on ease of use, attractive appearance, and optimal performance.  
+          With this approach, I believe a website is not just an online platform, but also a representation of the identity and values you want to showcase to the world.
+      </p>
+
+      <button class="cta" onclick="navigate('contact')">🚀 Explore My Social Media</button>
+    </div>
+    <div class="intro-avatar">
+      <img src="assets/profile1.jpeg" alt="My Avatar" />
+    </div>
+  </div>
+</section>
+
+    <section id="about" class="about-section">
+  <div class="container">
+    <h2>About Me</h2>
+    <p class="about-intro">
+      Hi! I am a student and beginner web developer who loves learning new things in the world of technology.
+      I believe that every line of code can bring about small but meaningful changes.
+    </p>
+
+    <div class="about-content">
+      <!-- Pendidikan -->
+      <div class="about-box">
+        <h3>Education</h3>
+        <ul class="timeline">
+          <li><strong>SD</strong> – SDN Cisarua 03 (2012 – 2018)</li>
+          <li><strong>SMP</strong> – MTS Ponpes Daarul Uluum Bantar Kemang (2018 – 2021)</li>
+          <li><strong>SMK</strong> – SMK Wikrama Kota Bogor (2021 – 2024)</li>
+        </ul>
+      </div>
+
+      <!-- Hobi -->
+      <div class="about-box">
+        <h3>Hobbies</h3>
+        <ul class="hobby-list">
+          <li>👨‍💻 Coding & exploring new technologies</li>
+          <li>🎮 play games strategi</li>
+          <li>🎧 playing modern and traditional musical instruments</li>
+          <li>📚 Read the article teknologi & startup</li>
+        </ul>
+      </div>
+
+      <!-- Keahlian -->
+      <div class="about-box">
+        <h3>Expertise</h3>
+        <ul class="skills-list">
+          <li>HTML, CSS, JavaScript (Basic & Intermediate)</li>
+          <li>Bootstrap, Responsive Web Design</li>
+          <li>Node.js (Basic)</li>
+          <li>Git & GitHub</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="motivation" id="motivation">
+  <div class="container">
+    <h2 class="section-title">Motivation</h2>
+    <p class="section-subtitle">Why should you choose me?</p>
+
+    <div class="motivation-list">
+      <div class="motivation-card">
+        <h3>🔥 Passion Is Not Just Lip Service</h3>
+        <p>I work on projects not just for the sake of work, but because it is my passion. I always pursue results until I am completely satisfied.</p>
+      </div>
+
+      <div class="motivation-card">
+        <h3>🎨 Clean & Modern Style</h3>
+        <p>I like simple, modern, and visually appealing designs. Your website will never go out of style.</p>
+      </div>
+
+      <div class="motivation-card">
+        <h3>👥 Fokus User Experience</h3>
+        <p>Not only the appearance, I ensure that the website is easy to understand and comfortable to use for anyone.</p>
+      </div>
+
+      <div class="motivation-card">
+        <h3>🔧 Broad Skills</h3>
+        <p>Not only the appearance, I ensure that the website is easy to understand and comfortable to use for anyone.</p>
+      </div>
+
+      <div class="motivation-card">
+        <h3>💬 Easy Communication</h3>
+        <p>Your wild ideas? Go for it! I'm open to discussion and brainstorming so that the project results are crazier and fresher.</p>
+      </div>
+
+      <div class="motivation-card">
+        <h3>⏳ Commitment & Results</h3>
+        <p>A deadline is a promise. I strive to be on time, without compromising the quality of my work.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+    
+    <section id="contact">
+  <h1 id="typing-text-contact"></h1>
+  <p>Connect with me on social media or check out some of my past projects.</p>
+  
+  <div class="contact-links">
+    <a href="https://github.com/andika180206" target="_blank">
+      <i class="bi bi-github"></i> GitHub
+    </a>
+    <a href="https://www.instagram.com/andika_dwif/" target="_blank">
+      <i class="bi bi-instagram"></i> Instagram
+    </a>
+    <a href="https://www.linkedin.com/in/andikadwif" target="_blank">
+      <i class="bi bi-linkedin"></i> LinkedIn
+    </a>
+    <a href="mailto:dwifandika35@gmail.com?subject=Halo%20Andika&body=Halo%20Andika,%0D%0A%0D%0ASaya%20tertarik%20untuk%20bekerja%20sama%20atau%20ingin%20tahu%20lebih%20tentang%20project%20yang%20sudah%20Anda%20buat.%0D%0A%0D%0ASalam,%0D%0A[Nama%20Client]">
+       <i class="bi bi-envelope-fill"></i> Email
+    </a>
+
+    <a href="https://wa.me/6287773797177?text=Halo%20Andika,%20saya%20tertarik%20dengan%20portfolio%20dan%20project%20Anda." target="_blank">
+       <i class="bi bi-whatsapp"></i> WhatsApp
+    </a>
+
+  </div>
+</section>
+
+<section id="skills">
+  <div class="container">
+    <h2 class="section-title">My Skills</h2>
+    <p class="section-subtitle">It's not just about IT👇</p>
+    <p class="section-subtitle">these are skills that I have and always apply in my daily life in the community around me👇</p>
+
+    <div class="skills-grid">
+      <div class="skill-box">
+        <h3>💻 Web Development</h3>
+        <p>Building a modern, clean, and responsive website.</p>
+      </div>
+      <div class="skill-box">
+        <h3>🎨 Desain Kreatif</h3>
+        <p>Create designs for branding, UI/UX, and streetwear (no 3D designs).</p>
+      </div>
+      <div class="skill-box">
+        <h3>⚽ Teamwork & Leadership</h3>
+        <p>Been active in communities/organizations, used to working with teams.</p>
+      </div>
+      <div class="skill-box">
+        <h3>🔧 Otomotif Skills</h3>
+        <p>Motorcycle maintenance (minor service, oil change, tune-up)
+        Carburetor & 2-stroke/4-stroke engine settings
+        Basic understanding of motorcycle and car engines.</p>
+      </div>
+      <div class="skill-box">
+        <h3>📚 Self Learning</h3>
+        <p>Accustomed to learning new things independently and consistently.</p>
+      </div>
+      <div class="skill-box">
+        <h3>🎤 communication</h3>
+        <p>Able to convey ideas clearly and easily understood.</p>
+      </div>
+      <div class="skill-box">
+        <h3>💪 Problem Solving</h3>
+        <p>Find creative solutions to solve everyday problems and projects.</p>
+      </div>
+      <div class="skill-box">
+        <h3>⚡ Electrical Skills</h3>
+        <p>Basics of motor & household electricity
+        Simple installation
+        Analysis & repair of electrical circuits.</p>
+      </div>
+      <div class="skill-box">
+        <h3>🎤 Public Speaking</h3>
+        <p>Confidently speak in front of people
+       Present material clearly
+        Build connections with the audience.</p>
+      </div>
+    </div>
+  </div>
+</section>
+  </main> 
+ <script src="script.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>

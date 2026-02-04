@@ -1,0 +1,497 @@
+/* =========================
+   LUXURY SKY BLUE THEME
+   Author: Andika
+   ========================= */
+
+/* ===== Root Color System ===== */
+:root {
+  --bg-main: #020617;
+  --bg-glass: rgba(255, 255, 255, 0.08);
+  --border-glass: rgba(255, 255, 255, 0.15);
+  --accent: #38bdf8;        /* sky blue */
+  --accent-soft: #e0f2fe;  /* soft white-blue */
+  --text-main: #e5e7eb;
+  --text-soft: #cbd5f5;
+}
+
+/* ===== Global ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+  background:
+    radial-gradient(circle at top left, #1e3a8a 0%, transparent 45%),
+    radial-gradient(circle at bottom right, #020617 0%, transparent 45%),
+    linear-gradient(120deg, #020617, #020617);
+  color: var(--text-main);
+  overflow-x: hidden;
+}
+
+/* subtle luxury motion */
+body::before {
+  content: "";
+  position: fixed;
+  inset: -30%;
+  background: conic-gradient(
+    from 0deg,
+    transparent,
+    rgba(56,189,248,0.08),
+    transparent,
+    rgba(255,255,255,0.05),
+    transparent
+  );
+  animation: luxuryRotate 40s linear infinite;
+  z-index: -1;
+}
+
+@keyframes luxuryRotate {
+  to { transform: rotate(360deg); }
+}
+
+/* ===== Navbar ===== */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(2, 6, 23, 0.7);
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid var(--border-glass);
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ===== Logo ===== */
+.logo img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid var(--accent);
+  box-shadow: 0 0 25px rgba(56,189,248,0.45);
+  transition: transform .4s ease;
+}
+
+.logo img:hover {
+  transform: scale(1.08);
+}
+
+/* ===== Menu Desktop ===== */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 26px;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text-soft);
+  font-weight: 500;
+  letter-spacing: .4px;
+  position: relative;
+  padding: 6px 0;
+  transition: color .3s ease;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  transition: all .3s ease;
+  transform: translateX(-50%);
+}
+
+nav a:hover {
+  color: var(--accent);
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* ===== Hamburger ===== */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: var(--accent);
+  cursor: pointer;
+}
+
+/* ===== MOBILE NAVBAR ===== */
+/* ===== MOBILE NAVBAR FIX (CENTER & CLEAN) ===== */
+@media (max-width: 768px) {
+
+  .hamburger {
+    display: block;
+    margin-left: auto;
+    z-index: 1100;
+  }
+
+  nav ul {
+    position: fixed;
+    top: 90px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-10px);
+    width: 88%;
+    max-width: 360px;
+
+    padding: 20px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    background: rgba(6, 10, 30, 0.96);
+    backdrop-filter: blur(24px);
+    border-radius: 22px;
+    border: 1px solid var(--border-glass);
+    box-shadow: 0 35px 90px rgba(0,0,0,.75);
+
+    opacity: 0;
+    pointer-events: none;
+    transition: all .35s ease;
+  }
+
+  nav ul.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(-50%) translateY(0);
+  }
+
+  nav ul li a {
+    text-align: center;
+    font-size: 1.1rem;
+    padding: 14px 0;
+    border-radius: 14px;
+    display: block;
+    color: var(--text-soft);
+  }
+
+  nav ul li a:hover {
+    background: rgba(56,189,248,0.12);
+    color: var(--accent);
+  }
+}
+
+
+/* ===== Section Base ===== */
+section {
+  display: none;
+  padding: 80px 20px;
+}
+
+section.active {
+  display: block;
+  animation: fadeUp .8s ease;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== Home ===== */
+.home-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.intro-text h1 {
+  font-size: 3rem;
+  margin: 0 0 10px;
+  letter-spacing: 1px;
+}
+
+.highlight {
+  color: var(--accent);
+}
+
+.intro-text h2 {
+  font-size: 1.6rem;
+  color: var(--accent-soft);
+  min-height: 40px;
+}
+
+.intro-text p {
+  line-height: 1.8;
+  color: var(--text-soft);
+  max-width: 600px;
+}
+
+.cta {
+  margin-top: 25px;
+  padding: 14px 34px;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(135deg, var(--accent), #60a5fa);
+  color: #020617;
+  font-weight: 600;
+  letter-spacing: .5px;
+  cursor: pointer;
+  box-shadow: 0 20px 40px rgba(56,189,248,0.35);
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.cta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 30px 60px rgba(56,189,248,0.5);
+}
+
+.intro-avatar img {
+  width: 300px;
+  border-radius: 50%;
+  border: 4px solid rgba(255,255,255,0.2);
+  box-shadow:
+    0 0 0 8px rgba(56,189,248,0.12),
+    0 40px 80px rgba(0,0,0,0.7);
+  transition: transform .5s ease;
+}
+
+.intro-avatar img:hover {
+  transform: scale(1.05);
+}
+
+/* ===== Glass Card ===== */
+.about-box,
+.skill-box,
+.motivation-card {
+  background: var(--bg-glass);
+  backdrop-filter: blur(18px);
+  border: 1px solid var(--border-glass);
+  border-radius: 20px;
+  padding: 26px;
+  box-shadow: 0 30px 70px rgba(0,0,0,0.5);
+  transition: transform .35s ease, box-shadow .35s ease;
+}
+
+.about-box:hover,
+.skill-box:hover,
+.motivation-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 45px 90px rgba(0,0,0,0.7);
+}
+
+/* ===== About ===== */
+#about {
+  text-align: center;
+}
+.about-section {
+  padding: 120px 20px;
+}
+
+.about-intro {
+  margin-bottom: 70px;
+}
+
+.about-content {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 50px; /* ini yang bikin gak dempet */
+}
+
+.about-box {
+  padding: 36px;
+  line-height: 1.8;
+}
+
+.about-box h3 {
+  margin-bottom: 20px;
+  font-size: 1.6rem;
+}
+
+.about-box ul li {
+  margin-bottom: 14px;
+  color: var(--text-soft);
+}
+
+
+/* ===== Skills ===== */
+#skills {
+  text-align: center;
+}
+.skills-grid {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.skill-box h3 {
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+/* ===== Motivation ===== */
+#motivation {
+  text-align: center;
+}
+.motivation {
+  padding: 130px 20px;
+}
+
+.motivation .section-subtitle {
+  margin-bottom: 80px;
+}
+
+.motivation-list {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 45px; /* jarak antar card */
+}
+
+.motivation-card {
+  padding: 34px;
+  line-height: 1.75;
+}
+
+.motivation-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 16px;
+}
+
+.motivation-card p {
+  color: var(--text-soft);
+}
+
+
+/* ===== Contact ===== */
+#contact {
+  text-align: center;
+}
+
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.contact-links a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 24px;
+  border-radius: 999px;
+  background: var(--bg-glass);
+  border: 1px solid var(--border-glass);
+  color: var(--text-main);
+  text-decoration: none;
+  transition: all .3s ease;
+}
+
+.contact-links a:hover {
+  background: var(--accent);
+  color: #020617;
+  box-shadow: 0 20px 40px rgba(56,189,248,0.45);
+}
+
+/* ===== Responsive ===== */
+/* ===== RESPONSIVE CLEAN (PHONE & TABLET) ===== */
+@media (max-width: 1024px) {
+
+  /* HOME */
+  .home-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .intro-text h1 {
+    font-size: 2.4rem;
+  }
+
+  .intro-text h2 {
+    font-size: 1.3rem;
+  }
+
+  .intro-text p {
+    margin: auto;
+  }
+
+  .intro-avatar img {
+    width: 220px;
+  }
+
+  /* SECTION SPACING */
+  section {
+    padding: 70px 18px;
+  }
+
+  .about-section,
+  .motivation {
+    padding: 90px 18px;
+  }
+}
+
+/* ===== PHONE EXTRA SMALL ===== */
+@media (max-width: 480px) {
+
+  .intro-text h1 {
+    font-size: 2rem;
+  }
+
+  .cta {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .about-box,
+  .skill-box,
+  .motivation-card {
+    padding: 24px;
+  }
+
+  .motivation-list,
+  .skills-grid,
+  .about-content {
+    gap: 28px;
+  }
+}
+
+
+  /* ABOUT */
+  .about-content {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  /* SKILLS */
+  .skills-grid {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  /* MOTIVATION */
+  .motivation-list {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
